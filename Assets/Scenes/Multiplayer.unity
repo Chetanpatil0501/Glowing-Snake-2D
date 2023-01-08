@@ -169,13 +169,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 996be9b16eabe1342a3b38464eaca036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  GameoverScreen: {fileID: 403977726}
-  Player_1_won: {fileID: 1080114521}
-  SpeedUptext: {fileID: 1631235595}
-  ShieldOntext: {fileID: 1780368425}
-  ShieldOfftext: {fileID: 1450021629}
-  SegmentPrefab: {fileID: 595411013524069086, guid: a3c35ebd61299e04e9d69ad02c86aec4, type: 3}
+  _speed: 0
+  _gameoverScreen: {fileID: 403977726}
+  _player_1_won_text: {fileID: 1080114521}
+  _speedUptext: {fileID: 1631235595}
+  _shieldOntext: {fileID: 1780368425}
+  _shieldOfftext: {fileID: 1450021629}
+  _segmentPrefab: {fileID: 595411013524069086, guid: a3c35ebd61299e04e9d69ad02c86aec4, type: 3}
 --- !u!61 &56553647
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -303,8 +303,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e472985483fa9d44a0862f966ae78f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Score_text: {fileID: 1370796273}
-  TwoXTextobject: {fileID: 212870586}
+  _score_text: {fileID: 1370796273}
+  _twoXTextobject: {fileID: 212870586}
+  _score: 0
 --- !u!1 &170895152
 GameObject:
   m_ObjectHideFlags: 0
@@ -1024,12 +1025,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  GameoverScreen: {fileID: 403977726}
-  Player_2_won: {fileID: 170895152}
-  SpeedUptext: {fileID: 1631235595}
-  ShieldOntext: {fileID: 1780368425}
-  ShieldOfftext: {fileID: 1450021629}
-  SegmentPrefab: {fileID: 595411013524069086, guid: 4cd44d66f49b5544190a61bfeae28650, type: 3}
+  _gameoverScreen: {fileID: 403977726}
+  _player_2_won_text: {fileID: 170895152}
+  _speedUptext: {fileID: 1631235595}
+  _shieldOntext: {fileID: 1780368425}
+  _shieldOfftext: {fileID: 1450021629}
+  _segmentPrefab: {fileID: 595411013524069086, guid: 4cd44d66f49b5544190a61bfeae28650, type: 3}
 --- !u!61 &930857918
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1169,8 +1170,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4334bf7d8d7890845bd5770b05bd7b9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Score_text: {fileID: 2073605190}
-  TwoXTextobject: {fileID: 212870586}
+  _score_text: {fileID: 2073605190}
+  _twoXTextobject: {fileID: 212870586}
   _score: 0
 --- !u!1 &965435758
 GameObject:
@@ -1269,8 +1270,8 @@ RectTransform:
   - {fileID: 403977727}
   - {fileID: 170895153}
   - {fileID: 1080114522}
-  - {fileID: 2073605189}
   - {fileID: 1370796272}
+  - {fileID: 2073605189}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1309,7 +1310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2ab9c53fca01f34ba7126dbbc9364f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PauseMenuObject: {fileID: 750653747}
+  _pauseMenuObject: {fileID: 750653747}
 --- !u!114 &1029194626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1614,7 +1615,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 965435762}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -2529,12 +2530,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bba9189d8feb3848949eba71a58ce22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TwoXpower: {fileID: 6429204043886982894, guid: f2105b015c1562f40a8f726fa6e27f80, type: 3}
-  TwoXSpawnTime: 0
-  SpeedUpSpawnTime: 0
-  SpeedUpprefab: {fileID: 0}
-  ShieldSpawnTime: 0
-  Shieldprefab: {fileID: 6429204043886982894, guid: 9f10e570eac7f7d458057d673e5df215, type: 3}
+  _twoXpower: {fileID: 6429204043886982894, guid: f2105b015c1562f40a8f726fa6e27f80, type: 3}
+  _twoXpowerSpawntime: 0
+  _speedUpSpawntime: 0
+  _speedUpPrefab: {fileID: 6429204043886982894, guid: 39f12dea7e00e87449e077dd5c3960d1, type: 3}
+  _shieldSpawnTime: 0
+  _shieldprefab: {fileID: 6429204043886982894, guid: 9f10e570eac7f7d458057d673e5df215, type: 3}
   gridArea: {fileID: 633491164}
 --- !u!4 &1641051600
 Transform:
@@ -2841,11 +2842,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 965435762}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -789.3, y: -50}
+  m_AnchoredPosition: {x: -789.2999, y: -50}
   m_SizeDelta: {x: 500, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2073605190

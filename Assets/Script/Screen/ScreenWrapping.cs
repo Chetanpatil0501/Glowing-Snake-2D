@@ -7,11 +7,14 @@ using UnityEngine.Events;
 [RequireComponent(typeof(BoxCollider2D))]
 public class ScreenWrapping : MonoBehaviour
 {
-    public Camera mainCamera;
+    //private
     BoxCollider2D boxCollider;
 
+    //public 
     public UnityEvent<Collider2D> ExitTriggerFired;
+    public Camera mainCamera;
 
+    //serialize
     [SerializeField]
     private float teleportOffset = 0;
 

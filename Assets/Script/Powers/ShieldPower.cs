@@ -1,10 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class ShieldPower : MonoBehaviour
 {
-    private void Update()
+   
+
+    private void Start()
     {
         Destroy(gameObject, 6);
     }

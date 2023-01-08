@@ -558,17 +558,6 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!114 &288688352 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 288688352, guid: bbcc9044606fae446990f2ffa0a44c27, type: 3}
-  m_PrefabInstance: {fileID: 1098830742}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -732,7 +721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2ab9c53fca01f34ba7126dbbc9364f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PauseMenuObject: {fileID: 980324902}
+  _pauseMenuObject: {fileID: 980324902}
 --- !u!114 &543182956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1109,8 +1098,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4334bf7d8d7890845bd5770b05bd7b9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Score_text: {fileID: 118967137}
-  TwoXTextobject: {fileID: 212870586}
+  _score_text: {fileID: 1098830745}
+  _twoXTextobject: {fileID: 212870586}
   _score: 0
 --- !u!114 &930857924
 MonoBehaviour:
@@ -1125,12 +1114,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  GameoverScreen: {fileID: 1098830744}
-  SpeedUptext: {fileID: 1631235595}
-  ShieldOntext: {fileID: 1780368425}
-  ShieldOfftext: {fileID: 1450021629}
-  Score_text: {fileID: 288688352}
-  SegmentPrefab: {fileID: 595411013524069086, guid: 4cd44d66f49b5544190a61bfeae28650, type: 3}
+  _gameoverScreen: {fileID: 1098830744}
+  _speedUptext: {fileID: 1631235595}
+  _shieldOntext: {fileID: 1780368425}
+  _shieldOfftext: {fileID: 1450021629}
+  _score_text: {fileID: 118967137}
+  _segmentPrefab: {fileID: 595411013524069086, guid: 4cd44d66f49b5544190a61bfeae28650, type: 3}
 --- !u!1 &965435758
 GameObject:
   m_ObjectHideFlags: 0
@@ -1340,6 +1329,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameOver screen
       objectReference: {fileID: 0}
+    - target: {fileID: 7539589252645761135, guid: bbcc9044606fae446990f2ffa0a44c27, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7539589252904151969, guid: bbcc9044606fae446990f2ffa0a44c27, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1360,6 +1353,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7539589252645761135, guid: bbcc9044606fae446990f2ffa0a44c27, type: 3}
   m_PrefabInstance: {fileID: 1098830742}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1098830745 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 288688352, guid: bbcc9044606fae446990f2ffa0a44c27, type: 3}
+  m_PrefabInstance: {fileID: 1098830742}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1387848597
 GameObject:
   m_ObjectHideFlags: 0
@@ -2043,12 +2047,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bba9189d8feb3848949eba71a58ce22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TwoXpower: {fileID: 6429204043886982894, guid: f2105b015c1562f40a8f726fa6e27f80, type: 3}
-  TwoXSpawnTime: 0
-  SpeedUpSpawnTime: 0
-  SpeedUpprefab: {fileID: 6429204043886982894, guid: 39f12dea7e00e87449e077dd5c3960d1, type: 3}
-  ShieldSpawnTime: 0
-  Shieldprefab: {fileID: 6429204043886982894, guid: 9f10e570eac7f7d458057d673e5df215, type: 3}
+  _twoXpower: {fileID: 6429204043886982894, guid: f2105b015c1562f40a8f726fa6e27f80, type: 3}
+  _twoXpowerSpawntime: 0
+  _speedUpSpawntime: 0
+  _speedUpPrefab: {fileID: 6429204043886982894, guid: 39f12dea7e00e87449e077dd5c3960d1, type: 3}
+  _shieldSpawnTime: 0
+  _shieldprefab: {fileID: 6429204043886982894, guid: 9f10e570eac7f7d458057d673e5df215, type: 3}
   gridArea: {fileID: 633491164}
 --- !u!4 &1641051600
 Transform:
