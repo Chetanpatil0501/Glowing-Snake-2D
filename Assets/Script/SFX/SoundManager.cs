@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    private static SoundManager _instance = null;
+   
     AudioSource Audio;
     [Header("UI Sound FX")]
     [SerializeField] AudioClip ButtonCLickclip;
@@ -15,28 +15,27 @@ public class SoundManager : MonoBehaviour
     [SerializeField] AudioClip PowerSFX;
     [SerializeField] AudioClip FoodSFX;
 
-
-    public static SoundManager instance
+    private static SoundManager instance = null;
+    public static SoundManager _instance
     {
         get
         {
 
-            if (_instance == null)
+            if (instance == null)
             {
-                _instance = (SoundManager)FindObjectOfType(typeof(SoundManager));
+                instance = (SoundManager)FindObjectOfType(typeof(SoundManager));
 
             }
-            return _instance;
+            return instance;
 
         }
     }
     private void Start()
     {
         Audio = GetComponent<AudioSource>();
-        if (instance == this)
-        {
-            DontDestroyOnLoad(gameObject);
-        }
+
+        DontDestroyOnLoad(gameObject);
+            
 
     }
 

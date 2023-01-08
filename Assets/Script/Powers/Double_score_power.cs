@@ -1,10 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class Double_score_power : MonoBehaviour
 { 
-    private void Update()
+   
+    private void Start()
     {
         Destroy(gameObject, 6);
     }
@@ -13,12 +13,12 @@ public class Double_score_power : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            SoundManager.instance.PowerSoundFX();
+            SoundManager._instance.PowerSoundFX();
             Destroy(this.gameObject);
         }
         if (collision.tag == "Player 2")
         {
-            SoundManager.instance.PowerSoundFX();
+            SoundManager._instance.PowerSoundFX();
             Destroy(this.gameObject);
         }
     }

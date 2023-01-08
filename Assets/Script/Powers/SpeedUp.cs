@@ -1,10 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class SpeedUp : MonoBehaviour
 {
-    private void Update()
+ 
+    private void Start()
     {
         Destroy(gameObject, 6);
     }

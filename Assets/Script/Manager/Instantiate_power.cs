@@ -1,21 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class Instantiate_power : MonoBehaviour
 {
     [Header("2X power spawn")]
-    public GameObject TwoXpower;
-    public float TwoXSpawnTime;
+    public GameObject _twoXpower; //For the prefab reference
+    public float _twoXpowerSpawntime;
 
     [Header("SpeedUp power spawn")]
-    public float SpeedUpSpawnTime;
-    public GameObject SpeedUpprefab;
-    
-    
+    public float _speedUpSpawntime;
+    public GameObject _speedUpPrefab;       //For the prefab reference
+
+
     [Header("Shield power spawn")]
-    public float ShieldSpawnTime;
-    public GameObject Shieldprefab;
+    public float _shieldSpawnTime;
+    public GameObject _shieldprefab;        //For the prefab reference
 
 
 
@@ -25,27 +24,27 @@ public class Instantiate_power : MonoBehaviour
 
     private void Start()
     {
-        TwoXSpawnTime = Random.Range(10, 15);
-        SpeedUpSpawnTime = Random.Range(20, 25);
-        ShieldSpawnTime = Random.Range(25, 35);
+        _twoXpowerSpawntime = Random.Range(10, 15);
+        _speedUpSpawntime = Random.Range(20, 25);
+        _shieldSpawnTime = Random.Range(25, 35);
     }
 
     private void Update()
     {
-        TwoXSpawnTime -= 1 * Time.deltaTime;
-        SpeedUpSpawnTime -= 1 * Time.deltaTime;
-        ShieldSpawnTime -= 1 * Time.deltaTime;
+        _twoXpowerSpawntime -= 1 * Time.deltaTime;
+        _speedUpSpawntime -= 1 * Time.deltaTime;
+        _shieldSpawnTime -= 1 * Time.deltaTime;
 
-        if (TwoXSpawnTime <= 0 )
+        if (_twoXpowerSpawntime <= 0 )
         {
             SpawnTwoX();
         }
-        if (SpeedUpSpawnTime <= 0)
+        if (_speedUpSpawntime <= 0)
         {
             SpawnSpeedUp();
         }
 
-        if (ShieldSpawnTime <= 0)
+        if (_shieldSpawnTime <= 0)
         {
             SpawnShield();
         }
@@ -54,7 +53,7 @@ public class Instantiate_power : MonoBehaviour
 
     void SpawnTwoX()
     {
-        TwoXSpawnTime = Random.Range(10, 25);
+        _twoXpowerSpawntime = Random.Range(10, 25);
         Bounds bounds = gridArea.bounds;
 
         // Pick a random position inside the bounds
@@ -67,12 +66,12 @@ public class Instantiate_power : MonoBehaviour
 
         Vector2 spawn = new Vector2(x, y);
 
-        Instantiate(TwoXpower, spawn, Quaternion.identity);
+        Instantiate(_twoXpower, spawn, Quaternion.identity);
     }
     
     void SpawnSpeedUp()
     {
-        SpeedUpSpawnTime = Random.Range(15, 35);
+        _speedUpSpawntime = Random.Range(15, 35);
         Bounds bounds = gridArea.bounds;
 
         // Pick a random position inside the bounds
@@ -85,12 +84,12 @@ public class Instantiate_power : MonoBehaviour
 
         Vector2 spawn = new Vector2(x, y);
 
-        Instantiate(SpeedUpprefab, spawn, Quaternion.identity);
+        Instantiate(_speedUpPrefab, spawn, Quaternion.identity);
     }
     
     void SpawnShield()
     {
-        ShieldSpawnTime = Random.Range(20, 35);
+        _shieldSpawnTime = Random.Range(20, 35);
         Bounds bounds = gridArea.bounds;
 
         // Pick a random position inside the bounds
@@ -103,7 +102,7 @@ public class Instantiate_power : MonoBehaviour
 
         Vector2 spawn = new Vector2(x, y);
 
-        Instantiate(Shieldprefab, spawn, Quaternion.identity);
+        Instantiate(_shieldprefab, spawn, Quaternion.identity);
     }
    
 }

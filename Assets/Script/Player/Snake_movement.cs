@@ -1,20 +1,20 @@
-using System.Collections;
+
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
 public class Snake_movement : MonoBehaviour
 {
-    private Vector2 _Direction = Vector2.right;
+    private Vector2 _direction = Vector2.right;
     public float speed;
-    private bool ShieldOn;
+    private bool _shieldOn;
     Score score_component;
-    public GameObject GameoverScreen;
-    public GameObject SpeedUptext;
-    public GameObject ShieldOntext;
-    public GameObject ShieldOfftext;
-    public TextMeshProUGUI Score_text;
-    public Transform SegmentPrefab;
+    public GameObject _gameoverScreen;
+    public GameObject _speedUptext;
+    public GameObject _shieldOntext;
+    public GameObject _shieldOfftext;
+    public TextMeshProUGUI _score_text;
+    public Transform _segmentPrefab;
 
 
 
@@ -23,9 +23,9 @@ public class Snake_movement : MonoBehaviour
 
     private void Awake()
     {
-        SpeedUptext.SetActive(false);
-        ShieldOntext.SetActive(false);
-        ShieldOfftext.SetActive(false);
+        _speedUptext.SetActive(false);
+        _shieldOntext.SetActive(false);
+        _shieldOfftext.SetActive(false);
         score_component = GetComponent<Score>();
     }
 
@@ -34,7 +34,8 @@ public class Snake_movement : MonoBehaviour
     {
         _BodySegment = new List<Transform>();
         _BodySegment.Add(transform);
-        
+
+        score_component = GetComponent<Score>();
     }
 
     // Update is called once per frame
@@ -43,33 +44,33 @@ public class Snake_movement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.W))
         {
-            if (_Direction != Vector2.down)
+            if (_direction != Vector2.down)
             {
-                _Direction = Vector2.up;
+                _direction = Vector2.up;
             }
 
         }
         else if (Input.GetKeyDown(KeyCode.S))
         {
-            if (_Direction != Vector2.up)
+            if (_direction != Vector2.up)
             {
-                _Direction = Vector2.down;
+                _direction = Vector2.down;
             }
 
         }
         else if (Input.GetKeyDown(KeyCode.A))
         {
-            if (_Direction != Vector2.right)
+            if (_direction != Vector2.right)
             {
-                _Direction = Vector2.left;
+                _direction = Vector2.left;
             }
 
         }
         else if (Input.GetKeyDown(KeyCode.D))
         {
-            if (_Direction != Vector2.left)
+            if (_direction != Vector2.left)
             {
-                _Direction = Vector2.right;
+                _direction = Vector2.right;
             }
         }
 
@@ -82,12 +83,12 @@ public class Snake_movement : MonoBehaviour
         {
             _BodySegment[i].position = _BodySegment[i - 1].position;
         }
-        transform.position = new Vector3(Mathf.Round(transform.position.x + _Direction.x), Mathf.Round(transform.position.y + _Direction.y), 0.0f);
+        transform.position = new Vector3(Mathf.Round(transform.position.x + _direction.x), Mathf.Round(transform.position.y + _direction.y), 0.0f);
     }
 
     private void Grow()
     {
-        Transform segment = Instantiate(this.SegmentPrefab);
+        Transform segment = Instantiate(this._segmentPrefab);
         segment.position = _BodySegment[_BodySegment.Count - 1].position;
         _BodySegment.Add(segment);
     }
@@ -100,36 +101,37 @@ public class Snake_movement : MonoBehaviour
         if (collision.tag == "Food")
         {
             Grow();
-            SoundManager.instance.FoodSoundFX();
+            SoundManager._instance.FoodSoundFX();
         }
 
         else if (collision.tag == "Body" || collision.tag == "Body 2")
         {
 
-            if (ShieldOn == false)
+            if (_shieldOn == false)
             {
 
                 Time.timeScale = 0;
 
-                GameoverScreen.SetActive(true);
+                _gameoverScreen.SetActive(true);
 
-                Score_text.text = "Your score : " + score_component._score.ToString();
+                _score_text.text = "Your score : " + score_component._score.ToString();
             }
         }
 
         if (collision.tag == "SpeedUp")
         {
-            SoundManager.instance.PowerSoundFX();
-            Time.timeScale = 1.5f; ;
+            SoundManager._instance.PowerSoundFX();
+            //Time.timeScale = 1.5f;
+            speed = 10;
             Invoke("CoolDownSpeed", 6);
-            SpeedUptext.SetActive(true);
+            _speedUptext.SetActive(true);
         }
 
         if (collision.tag == "Shield")
         {
-            SoundManager.instance.PowerSoundFX();
-            ShieldOn = true;
-            ShieldOntext.SetActive(true);
+            SoundManager._instance.PowerSoundFX();
+            _shieldOn = true;
+            _shieldOntext.SetActive(true);
             Invoke("ShieldDisable", 10);
         }
     }
@@ -142,15 +144,15 @@ public class Snake_movement : MonoBehaviour
            Time.timeScale -= 1f * Time.deltaTime;
            Time.timeScale = Mathf.Clamp(speed, 1f, 1.5f);
         }
-        SpeedUptext.SetActive(false);
+        _speedUptext.SetActive(false);
     }
 
     private void ShieldDisable()
     {
 
-        ShieldOn = false;
-        ShieldOntext.SetActive(false);
-        ShieldOfftext.SetActive(true);
+        _shieldOn = false;
+        _shieldOntext.SetActive(false);
+        _shieldOfftext.SetActive(true);
         Invoke("Awake", 3f);
     }
     
