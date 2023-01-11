@@ -3,15 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Food
-  - Body
-  - 2xFood
-  - SpeedUp
-  - Shield
-  - MassBurner
-  - Body 2
-  - Player 2
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -19,9 +11,9 @@ TagManager:
   - 
   - Water
   - UI
-  - level
   - 
-  - Psot processing
+  - 
+  - 
   - 
   - 
   - 
@@ -48,10 +40,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: level
-    uniqueID: 292243297
-    locked: 0
-  - name: level UI
-    uniqueID: 92115205
     locked: 0
