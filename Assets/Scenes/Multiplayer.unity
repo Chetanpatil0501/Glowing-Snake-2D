@@ -135,9 +135,9 @@ GameObject:
   - component: {fileID: 56553649}
   - component: {fileID: 56553648}
   - component: {fileID: 56553647}
-  - component: {fileID: 56553646}
   - component: {fileID: 56553645}
   - component: {fileID: 56553651}
+  - component: {fileID: 56553652}
   m_Layer: 8
   m_Name: Snake 2
   m_TagString: Player 2
@@ -157,25 +157,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fce3637df91f0945a8ddeb20c93f001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &56553646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 56553643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 996be9b16eabe1342a3b38464eaca036, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 0
-  _gameoverScreen: {fileID: 403977726}
-  _player_1_won_text: {fileID: 1080114521}
-  _speedUptext: {fileID: 1631235595}
-  _shieldOntext: {fileID: 1780368425}
-  _shieldOfftext: {fileID: 1450021629}
-  _segmentPrefab: {fileID: 595411013524069086, guid: a3c35ebd61299e04e9d69ad02c86aec4, type: 3}
 --- !u!61 &56553647
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -300,12 +281,32 @@ MonoBehaviour:
   m_GameObject: {fileID: 56553643}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e472985483fa9d44a0862f966ae78f5, type: 3}
+  m_Script: {fileID: 11500000, guid: 4334bf7d8d7890845bd5770b05bd7b9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _score_text: {fileID: 1370796273}
   _twoXTextobject: {fileID: 212870586}
   _score: 0
+--- !u!114 &56553652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56553643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cd1ced6d1ea5d74a81985e505b1472a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  _gameoverScreen: {fileID: 403977726}
+  _player_won_text: {fileID: 1080114521}
+  _speedUptext: {fileID: 1631235595}
+  _shieldOntext: {fileID: 1780368425}
+  _shieldOfftext: {fileID: 1450021629}
+  _segmentPrefab: {fileID: 595411013524069086, guid: a3c35ebd61299e04e9d69ad02c86aec4, type: 3}
+  _BodySegment: []
 --- !u!1 &170895152
 GameObject:
   m_ObjectHideFlags: 0
@@ -1002,9 +1003,9 @@ GameObject:
   - component: {fileID: 930857920}
   - component: {fileID: 930857919}
   - component: {fileID: 930857918}
-  - component: {fileID: 930857917}
   - component: {fileID: 930857922}
   - component: {fileID: 930857923}
+  - component: {fileID: 930857924}
   m_Layer: 6
   m_Name: Snake 1
   m_TagString: Player
@@ -1012,25 +1013,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &930857917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 930857916}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ac8697c53226d74c99022e52e2e231e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  _gameoverScreen: {fileID: 403977726}
-  _player_2_won_text: {fileID: 170895152}
-  _speedUptext: {fileID: 1631235595}
-  _shieldOntext: {fileID: 1780368425}
-  _shieldOfftext: {fileID: 1450021629}
-  _segmentPrefab: {fileID: 595411013524069086, guid: 4cd44d66f49b5544190a61bfeae28650, type: 3}
 --- !u!61 &930857918
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1173,6 +1155,26 @@ MonoBehaviour:
   _score_text: {fileID: 2073605190}
   _twoXTextobject: {fileID: 212870586}
   _score: 0
+--- !u!114 &930857924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930857916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ce729d6485bb104fa3029236199f895, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  _gameoverScreen: {fileID: 403977726}
+  _player_won_text: {fileID: 170895152}
+  _speedUptext: {fileID: 1631235595}
+  _shieldOntext: {fileID: 1780368425}
+  _shieldOfftext: {fileID: 1450021629}
+  _segmentPrefab: {fileID: 595411013524069086, guid: 4cd44d66f49b5544190a61bfeae28650, type: 3}
+  _BodySegment: []
 --- !u!1 &965435758
 GameObject:
   m_ObjectHideFlags: 0
@@ -2234,6 +2236,67 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4eb4bd4fe939084469df08107b7bcc8a, type: 3}
+--- !u!1001 &1546363755
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6981469715249457133, guid: 2011a95a5167f0b44b79c0655e177a52, type: 3}
+      propertyPath: gridArea
+      value: 
+      objectReference: {fileID: 633491164}
+    - target: {fileID: 8543721424786224907, guid: 2011a95a5167f0b44b79c0655e177a52, type: 3}
+      propertyPath: m_Name
+      value: Massburn
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543721424786224908, guid: 2011a95a5167f0b44b79c0655e177a52, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543721424786224908, guid: 2011a95a5167f0b44b79c0655e177a52, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543721424786224908, guid: 2011a95a5167f0b44b79c0655e177a52, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543721424786224908, guid: 2011a95a5167f0b44b79c0655e177a52, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543721424786224908, guid: 2011a95a5167f0b44b79c0655e177a52, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543721424786224908, guid: 2011a95a5167f0b44b79c0655e177a52, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543721424786224908, guid: 2011a95a5167f0b44b79c0655e177a52, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543721424786224908, guid: 2011a95a5167f0b44b79c0655e177a52, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543721424786224908, guid: 2011a95a5167f0b44b79c0655e177a52, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543721424786224908, guid: 2011a95a5167f0b44b79c0655e177a52, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543721424786224908, guid: 2011a95a5167f0b44b79c0655e177a52, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2011a95a5167f0b44b79c0655e177a52, type: 3}
 --- !u!1 &1578277810
 GameObject:
   m_ObjectHideFlags: 0
@@ -2739,7 +2802,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c65130b502cdc749b652185ea8dbc24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 519420031}
   ExitTriggerFired:
     m_PersistentCalls:
       m_Calls:
@@ -2755,6 +2817,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  mainCamera: {fileID: 519420031}
   teleportOffset: 0
   cornerOffset: 0
 --- !u!61 &1992948124

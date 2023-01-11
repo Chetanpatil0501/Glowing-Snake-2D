@@ -1,19 +1,11 @@
 
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameOverscreen : MonoBehaviour
 {
-    //private Score score;
-
-    //private void Start()
-    //{
-    //    score = GetComponent<Score>();
-    //}
-
-
-
-
+   
 
     public void restart()
     {
